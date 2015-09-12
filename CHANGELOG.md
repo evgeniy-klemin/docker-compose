@@ -1,7 +1,10 @@
 # Docker-compose Docker Image CHANGELOG
 
+## 2015-09-12
+* Update to [docker-compose 1.4.0](https://github.com/docker/compose/releases/tag/1.4.0)
+
 ## 2015-07-21
-* Update to [docker-compose 1.3.3](https://github.com/docker/compose/releases/tag/1.3.3) 
+* Update to [docker-compose 1.3.3](https://github.com/docker/compose/releases/tag/1.3.3)
 
 ## 2015-06-14
 * Moving base image to debian 8.1 to ensure sendfile bug does not exists anymore
