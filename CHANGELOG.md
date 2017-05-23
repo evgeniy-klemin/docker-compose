@@ -1,5 +1,20 @@
 # Docker-compose Docker Image CHANGELOG
 
+## 2016-02-13
+* Update to [docker-compose 1.6.0](https://github.com/docker/compose/releases/tag/1.6.0)
+
+## 2015-12-08
+* Update to [docker-compose 1.5.2](https://github.com/docker/compose/releases/tag/1.5.2)
+
+## 2015-11-17
+* Update to [docker-compose 1.5.1](https://github.com/docker/compose/releases/tag/1.5.1)
+* Moving to debian:8.2 image
+* Removing debian testings (separation of concerns)
+
+## 2015-11-11
+* Thanks to [d3m3vilurr](https://github.com/dduportal-dockerfiles/docker-compose/pull/21) - Update to [docker-compose 1.5.0](https://github.com/docker/compose/releases/tag/1.5.0)
+* Moving to Docker 1.9.0 for integration tests
+
 ## 2015-09-23
 * Update to [docker-compose 1.4.2](https://github.com/docker/compose/releases/tag/1.4.2)
 

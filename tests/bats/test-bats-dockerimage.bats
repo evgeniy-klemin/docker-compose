@@ -1,10 +1,7 @@
 #!/usr/bin/env bats
 
-COMPOSE_VERSION=1.4.2
 @test "With no cmd/args, the image return docker-compose version ${COMPOSE_VERSION}" {
-	result="$(docker run ${DOCKER_IMAGE_NAME})"
-	[[ "$result" == *"docker-compose version: ${COMPOSE_VERSION}"* ]]
-	echo "-$result-"
+	docker run "${DOCKER_IMAGE_NAME}" | grep "${COMPOSE_VERSION}"
 }
 
 @test "A Basic fig.yml must run a complete lifecycle" {
@@ -25,9 +22,4 @@ COMPOSE_VERSION=1.4.2
 		--workdir /app/tests/sample \
 		"${DOCKER_IMAGE_NAME}" up -d
 
-}
-
-DEBIAN_VERSION=8.1
-@test "We use the debian linux version ${DEBIAN_VERSION}" {
-	[ $(docker run --entrypoint sh "${DOCKER_IMAGE_NAME}" -c "grep \"${DEBIAN_VERSION}\" /etc/debian_version | wc -l") -eq 1 ]
 }
